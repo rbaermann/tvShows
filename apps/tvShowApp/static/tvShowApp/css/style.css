@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin: auto;
+    width: 970px;
+}
+
+input, h4, h1 {
+    display: inline-block;
+    vertical-align: top;
+}

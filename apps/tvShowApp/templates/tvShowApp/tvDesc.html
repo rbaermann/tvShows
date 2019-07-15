@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Read (One)</title>
+        {% load static %}
+        <link rel='stylesheet' href='{% static "tvShowApp/css/style.css" %}'>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>TV Show {{ show.id }}</h1><br>
+            <h4>Title: {{ show.title }}</h4><br>
+            <h4>Network: {{ show.network }}</h4><br>
+            <h4>Release Date: {{ show.release_date }}</h4><br>
+            <h4>Description: {{ show.desc }}</h4><br>
+            <h4>Last Updated: {{ show.updated_at }}</h4><br>
+            <a href='/shows'>Go Back</a>
+        </div>
+    </body>
+</html>

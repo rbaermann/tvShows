@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Update</title>
+        {% load static %}
+        <link rel='stylesheet' href='{% static "tvShowApp/css/style.css" %}'>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Edit Show {{ show.title }}</h1>
+            <a href='/shows'>Go Back</a>
+            <form action='/shows/{{ show.id }}/editShow' method='POST'>
+                {% csrf_token %}
+                <h4>Title</h4>
+                <input type='text' name='title'><br>
+                <h4>Network</h4>
+                <input type='text' name='network'>
+                <h4>Release Date</h4>
+                <input type='date' name='release_date'><br>
+                <h4>Description</h4>
+                <textarea name='desc'></textarea><br>
+                <input type='submit' value='Update'>
+            </form>
+            <a href='/shows/{{ show.id }}'>Go to Show</a>
+        </div>
+    </body>
+</html>
